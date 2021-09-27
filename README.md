@@ -1,7 +1,12 @@
 # Growing with CPP
 
-#### ***This repo is solely created for storing relevant concepts and topics, explained in C++ language. Check out my take on various topics and if it needs some correction, be my guest.***
+#### ***This repo is solely created for storing relevant concepts and topics, explained in C++ language. Check out my take on various topics. If it needs some correction, please let me know.***
 
 ## Content
 - [Sorting Algorithms](./sorting_algorithms)
 - [DS - Trees](./trees)
+
+Happy Learning !!
+
+PR's are welcomed !!
+
