@@ -4,3 +4,4 @@
 
 ## Content
 - [Sorting Algorithms](./sorting_algorithms)
+- [DS - Trees](./trees)
