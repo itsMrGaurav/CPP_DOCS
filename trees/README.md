@@ -1,10 +1,11 @@
 ## Tree Data Structures
-### In this section, I have tried to explain how to create a tree and what logic goes behind it. If you found any errors, please let me know.
+### This section is concerned with various types of tree data structures.
 
 Content - 
 - [Binary Search Tree](./bst.cpp)
 
 
+### If you found any errors, please let me know.
 
 
 ***PR's are most welcomed***
