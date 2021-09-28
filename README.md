@@ -5,6 +5,7 @@
 ## Content
 - [Sorting Algorithms](./sorting_algorithms)
 - [DS - Trees](./trees)
+- [DS - Lists](./lists)
 
 Happy Learning !!
 
