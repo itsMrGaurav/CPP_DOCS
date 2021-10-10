@@ -1,55 +1,55 @@
+/*
+Source code for singly linked list
+*/
+
 #include <iostream>
 using namespace std;
 
 
 
-/*
-Source code for singly linked list
-*/
-
-
-// represent single node of our list
-struct node
+struct Node 															// represents a single node 
 {
 	int key;
-	node* next = NULL;
+	Node* next = NULL;
+	Node(){
+		key = -1;
+	}
+	Node(int val){
+		key = val;
+	}
 };
 
-typedef struct node node;
+typedef struct Node Node;
 
 
 class SinglyLinkedList{
 public:
-	node* root = new node;
+	Node* root = new Node;
 
-	SinglyLinkedList(){   // default constructor, initializes data member
+	SinglyLinkedList(){   
 		root = NULL;
 	}
-	SinglyLinkedList(int val){  // parameterised constructor 
-		root->key = val;
+	SinglyLinkedList(int key){  
+		root = new Node(key);
 	}
 	
-	// inserts node at the end of the list
-	void insert(int val){   
-		if (!root){
-			root = new node;
-			root->key = val;
+
+	void insert(int key){   											// to insert a new node
+		if (!root){														// creates root if non existant
+			root = new Node(key);
 		}
-		else{
-			node* thisnode = root;
-			while(thisnode->next){
-				thisnode = thisnode->next;
-			}
-			thisnode->next = new node;
-			thisnode->next->key = val;
+		else{															// else insert after root
+			Node* node = new Node(key);
+			node->next = root->next;
+			root->next = node;
 		}
 	}
 
-	//remove node with given key, if exists
-	void remove(int val){
-		node* thisnode = root, *prevnode = NULL;
+	
+	void remove(int key){ 												// remove node with given key, if exists
+		Node* thisnode = root, *prevnode = NULL;
 		while (thisnode){
-			if (thisnode->key == val){
+			if (thisnode->key == key){
 				if (prevnode){
 					prevnode->next = thisnode->next;
 				}
@@ -60,12 +60,11 @@ public:
 			prevnode = thisnode;
 			thisnode = thisnode->next;
 		}
-		cout<<"Value not found"<<endl;
+		cout<<"Node not found"<<endl;
 	}
 
-	//display the list
-	void display(){
-		node* thisnode = root;
+	void display(){														// display the list
+		Node* thisnode = root;
 		while(thisnode){
 			cout<<thisnode->key<<"->";
 			thisnode = thisnode->next;
@@ -73,3 +72,19 @@ public:
 		cout<<"NULL"<<endl;
 	}	
 };
+
+
+int main(int argc, char const *argv[])
+{
+	SinglyLinkedList ls;
+	ls.insert(12);
+	ls.insert(13);
+	for (int i = 14; i < 20; ++i)
+	{
+		ls.insert(i);
+	}
+	ls.remove(12);
+	ls.remove(15);
+	ls.display();
+	return 0;
+}
