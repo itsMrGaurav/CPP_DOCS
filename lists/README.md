@@ -3,7 +3,10 @@
 
 Content - 
 - [Singly Linked List](./singlylinkedlist.cpp)
+<img src = "https://github.com/itsKiranay/CPP_DOCS/blob/main/lists/images/singlylinked.png">
 
+- [Doubly Linked List](./doublylinkedlist.cpp)
+<img src = "https://github.com/itsKiranay/CPP_DOCS/blob/main/lists/images/doublylinked.png">
 
 ### If you found any errors, please let me know.
 
